@@ -1,0 +1,39 @@
+{% extends "hunter_game/layout.html" %}
+{% load crispy_forms_tags %}
+
+{% block style %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style type="text/css">
+  .jumbotron{
+    background-color: lightblue;
+    margin: 2.5% 30% 0 25%; 
+  }
+
+  #profile{
+      width:70px;
+      height:70px;
+      margin-left: 43px;
+  }
+  .content-section{
+    margin-left: 35%; 
+    margin-right: 75%; 
+  }
+
+  
+
+</style>
+
+{% endblock style %}
+{% block body %}
+<div class="jumbotron">
+    <div class="content-section">
+      <img  id='profile' class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+      <div class="media">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock body %}

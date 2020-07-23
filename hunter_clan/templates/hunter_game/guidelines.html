@@ -1,0 +1,42 @@
+{% extends 'hunter_game/layout.html' %}
+{% load static %}
+
+
+{% block style %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style>
+    .guide {
+        display: block;
+        width: 800px;
+        height: 500px;
+        margin: 2% auto 0 auto;
+            }
+    #point{
+        font-size: 28px;
+    }
+    .icon {
+        width: 28px;
+        height: 28px;
+        text-decoration: none;
+    }
+
+
+</style>
+
+{% endblock style %}
+
+{% block body %}
+<div class="guide">
+    <ol>
+        <li id="point"><b>Register with valid credentials. </b></li>
+        <li id="point"><b>Login with username and password.</b></li>
+        <li id="point"><b>Each stage contains multiple challenges having game points respectively. User with highest points will be ranked from top, tie breaks are essentially resolved by time of completion of challenge.</b></li>
+        <li id="point"><b>Users in the top ranks will be selected for the next round or for announcing winners.</b></li>
+        <li id="point"><b>Make sure the given Email Id is valid so that we can contact you.</b></li>
+        <li id="point"><b>User data (username, email, passwords) will be cleared after one Hunt.</b></li>
+        <li id="point"><b>Decision of Admins will be final.</b></li>
+        <li id="point"><b>For any clarification participants can dm to <a href="https://www.instagram.com/hunters_clan_online/"><img alt="No image" class="icon" src="{% static 'hunter_game/instagram.png' %}"/></a> or <a style="color:#647067;" href="mailto:info@example.com?subject=subject&cc=cc@example.com"><img alt="No image" class="icon" src="{% static 'hunter_game/mail.png' %}"/></a></b></li>
+    </ol>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,44 @@
+{% extends 'hunter_game/layout.html' %}
+{% load static %}
+
+
+{% block style %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style>
+    #logo {
+        width: 350px;
+        height: 350px;
+    }
+
+    .icon {
+        width: 23px;
+        height: 23px;
+        text-decoration: none;
+    }
+
+    label {
+        font-size: 30px;
+    }
+
+
+
+</style>
+
+{% endblock style %}
+
+{% block body %}
+<div class="home">
+    <div class="main-logo">
+    	<img id="logo" class="mx-auto d-block" src="{% static 'hunter_game/logo.png' %}" alt="My image">
+    </div>
+    <div class="text-center">
+        <h3>Follow us</h3>
+        &nbsp;
+        <a href="https://www.instagram.com/hunters_clan_online/"><img alt="No image" class="icon" src="{% static 'hunter_game/instagram.png' %}" />
+        </a>
+        &nbsp;
+        <a href="https://www.facebook.com/huntersclanonline"><img alt="No image" class="icon" src="{% static 'hunter_game/facebook.png' %}" />
+        </a>
+    </div>
+</div>
+{% endblock body %}
